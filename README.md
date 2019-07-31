@@ -30,4 +30,4 @@ Data Cleaning (rtReviews and tmbdMovies datasets), data pre-processing, visualiz
 #### narrative notebook<Microsoft_Movie_Investments_Narrative.ipynb>
 #### graphics for narrative (under 'visualizations' folder)
 #### README.md
-#### slides<not downloaded or named yet>
+#### [Slides](https://docs.google.com/presentation/d/1meuZ5l61Y-L2R-s4678v-N_4kMVBuYht3UA50C2kcfw/edit?usp=sharing)
