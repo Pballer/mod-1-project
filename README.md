@@ -27,7 +27,7 @@ Data Cleaning (rtReviews and tmbdMovies datasets), data pre-processing, visualiz
 #### vizualization datasets <visualizations>
 #### technical notebook<Microsoft_Movie_Investments.ipynb>
 #### 2 py files for technical notebook <'preprocessor.py', 'visualizations.py'>
-#### narrative notebook<find names on Cory's github (Pballer)>
+#### narrative notebook<Microsoft_Movie_Investments_Narrative.ipynb>
 #### graphics for narrative (under 'visualizations' folder)
 #### README.md
 #### slides<not downloaded or named yet>
