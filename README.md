@@ -1,4 +1,4 @@
-# mod-1-project
+# Mdd-1-Project
 
 
 ## Project Members: Cory, Ian, Michael
