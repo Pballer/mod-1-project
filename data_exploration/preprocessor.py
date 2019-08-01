@@ -109,25 +109,28 @@ def remove_invalid_genres(imdb_tn_cleaned):
 def melt_genres(imdb_tn_cleaned):
     """
 
-    Split genres column into multiple rows.
-
-    Similar to melt function in pandas.
+    Melt genres column into multiple rows.
 
     """
-    genres_movie = pd.concat([
-        pd.Series(row['tconst'], row['genres'].split(','))
-        for _, row in imdb_tn_cleaned.iterrows()]).reset_index()
 
-    genres_movie.columns = ['genre', 'tconst']
+    # Split genres into 3 columns.
+    imdb_tn_cleaned[['genre1', 'genre2', 'genre3']] = \
+        imdb_tn_cleaned.genres.str.split(
+            ',',
+            expand=True
+        )
 
-    imdb_tn_current_split_genres = pd.merge(
-        imdb_tn_cleaned,
-        genres_movie,
-        on=['tconst'],
-        how='inner',
-    )
+    # Melt into one genre column.
+    genre_melt = imdb_tn_cleaned.melt(
+        id_vars=imdb_tn_cleaned.columns[:-3],
+        value_vars=['genre1', 'genre2', 'genre3'],
+        value_name='genre')
 
-    return imdb_tn_current_split_genres
+    # Remove null genres.
+    genre_melt.dropna(subset=['genre'], inplace=True)
+    genre_melt.drop(columns=['variable'], inplace=True)
+
+    return genre_melt
 
 
 def calculate_number_of_genres_per_movie(imdb_tn_by_genre):
