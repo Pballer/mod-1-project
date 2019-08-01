@@ -22,11 +22,11 @@ Data Cleaning (rtReviews and tmbdMovies datasets), data pre-processing, visualiz
 
 
 ## Summary of the files in the repository
-#### initial datasets*<data_exploration)>
+#### initial datasets*<data_exploration/data)>
 #### merged cleaned dataset <processed_data>
 #### vizualization datasets <visualizations>
 #### technical notebook<Microsoft_Movie_Investments.ipynb>
-#### 2 py files for technical notebook <'preprocessor.py', 'visualizations.py'>
+#### 3 py files for technical notebook <'preprocessor.py', 'visualizations.py', 'barplots.py'>
 #### narrative notebook<Microsoft_Movie_Investments_Narrative.ipynb>
 #### graphics for narrative (under 'visualizations' folder)
 #### README.md
