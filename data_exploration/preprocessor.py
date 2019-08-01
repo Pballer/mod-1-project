@@ -107,12 +107,7 @@ def remove_invalid_genres(imdb_tn_cleaned):
 
 
 def melt_genres(imdb_tn_cleaned):
-    """
-
-    Melt genres column into multiple rows.
-
-    """
-
+    """Melt genres column into multiple rows."""
     # Split genres into 3 columns.
     imdb_tn_cleaned[['genre1', 'genre2', 'genre3']] = \
         imdb_tn_cleaned.genres.str.split(
